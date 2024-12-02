@@ -1,0 +1,240 @@
+/* Lourdes Yesenia Soto Arias */
+body, html {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Asegurar que el contenido se apile verticalmente */
+}
+body {
+    background: url(img1/fondo.jpeg);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+}
+
+.Header.abajo {
+    background: #c36bdd;
+    padding: 15px 20px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    color: white;
+    font-size: 30px;
+}
+
+.Header .logo {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: absolute; 
+    width: 100%;
+    top: 0;
+    padding-top: 30px; 
+}
+
+.Header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header .menu .item {
+    list-style-type: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Header .menu .item .link {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f8f4f2;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.menu .item .link:hover {
+    color: rgb(53, 51, 51);
+    border-radius: 15px;
+}
+
+.container {
+    margin: 150px auto 0 auto;
+    min-width: 200px;
+    max-width: 600px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.cargo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cargo li {
+    margin-bottom: 20px;
+}
+
+.profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.perfimg {
+    width: 30%;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 15px;
+    background-color: rgb(255, 0, 0);
+    font-size: 24px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(200, 0, 0);
+    transform: scale(1.05);
+}
+
+@media (max-width: 968px) {
+    h1 {
+        font-size: 28px;
+    }
+    .container {
+        padding: 10px;
+    }
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .navbar .menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(23, 55, 143);
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .navbar .menu .item {
+        padding: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu {
+        transition: all 0.5s;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .Header .logo {
+        font-size: 1.5em;
+    }
+
+    .perfimg {
+        width: 40%;
+        height: auto;
+    }
+    button {
+        font-size: 18px;
+        height: auto;
+    }
+    .navbar {
+        padding: 10px 40px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Header .menu .item .link {
+        margin: 5px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 22px;
+    }
+    .container {
+        margin-top: 200px;
+        padding: 1px;
+        max-width: 90%;
+    }
+    .perfimg {
+        width: 40%;
+        height: auto;
+    }
+    button {
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+    }
+    .Header .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .Header .menu .item .link {
+        margin: 2px;
+        font-size: 16px;
+    }
+}
